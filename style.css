@@ -1,0 +1,36 @@
+body {
+  display: grid;
+  grid-gap: 10px;
+}
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0px 20px;
+}
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  opacity: 1;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+h2 {
+  transition: 0.5s ease;
+  position: relative;
+  top: -10%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: darkgray;
+}
+.posts:hover img {
+  opacity: 0.3;
+}
+.posts:hover h2 {
+  opacity: 1;
+}
