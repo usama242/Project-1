@@ -1,11 +1,19 @@
 body {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 20px;
 }
 .content {
   display: grid;
   grid-template-columns: 1fr;
   margin: 0px 20px;
+}
+.navbar {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 10px;
+  justify-content: space-evenly;
+  background-color: lightgray;
 }
 .posts {
   display: flex;
@@ -18,7 +26,7 @@ img {
   transition: 0.5s ease;
   backface-visibility: hidden;
 }
-h2 {
+.name {
   transition: 0.5s ease;
   position: relative;
   top: -10%;
@@ -26,11 +34,31 @@ h2 {
   opacity: 0;
   transform: translate(-50%, -50%);
   text-align: center;
-  background-color: darkgray;
+  font-size: 1.3em;
+  font-weight: 900;
 }
 .posts:hover img {
   opacity: 0.3;
 }
-.posts:hover h2 {
+.posts:hover .name {
   opacity: 1;
+}
+.footer {
+  background-color: lightgray;
+  text-align: center;
+  padding: 10px;
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0px 20px;
+  }
+}
+@media screen and (min-width: 901px) {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0px 20px;
+  }
 }
